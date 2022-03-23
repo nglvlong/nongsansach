@@ -1,0 +1,26 @@
+
+#gallery{
+    margin-top: 10px;
+}
+#gallery ul{
+    margin: 0;
+    padding: 0;
+}
+#gallery ul li{
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+    /* border: 1px solid #cdcdcd; */
+    display: inline-block;
+}
+#gallery ul li img{
+    width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    display: -webkit-inline-box;
+}

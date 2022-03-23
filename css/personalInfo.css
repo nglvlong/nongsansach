@@ -1,0 +1,358 @@
+:root {
+    --green: #27ae60;
+    --black: #2c2c54;
+}
+.header-2.active {
+    position: relative;
+}
+.manage-info {
+    display: flex;
+    background-color: #e8e8e8;
+}
+.menu {
+    width: 230px;
+    float: left;
+    font-size: 16px;
+}
+.menu ul {
+    list-style: none;
+    width: 100%;
+}
+.menu ul li {
+    padding: 5px 15px;
+    color: #525252;
+}
+.menu ul li a {
+    color: #525252;
+}
+.menu ul li:hover {
+    padding: 5px 15px;
+    background-color: var(--green);
+    color: white;
+}
+
+.menu ul li.activeMenu {
+    background-color: var(--green);
+    color: white;
+}
+.tabcontent {
+    padding: 2rem;
+    box-shadow: 2px 2px #27ae60;
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+}
+.tabcontent h1 {
+    font-size: 20px;
+    width: max-content;
+}
+.tabcontent hr {
+    border-top: solid 1px #dddddd;
+    margin: 2rem 0;
+}
+.tabcontent .table-info {
+    font-size: 16px;
+}
+.tabcontent .table-info tr td {
+    padding: 10px 5px;
+}
+.tabcontent .table-info tr .col-1 {
+    text-align: right;
+}
+.tabcontent .table-info tr .col-2 {
+    text-align: left;
+}
+.tabcontent .table-info tr .email {
+    text-transform: lowercase;
+}
+.tabcontent .table-info tr td input[type="text"] {
+    height: 100%;
+    width: 100%;
+    border: #dddddd 1px solid;
+    font-size: 16px;
+    padding: 10px;
+}
+.tabcontent .table-info tr td input[type="password"] {
+    height: 100%;
+    width: 100%;
+    border: #dddddd 1px solid;
+    font-size: 16px;
+    padding: 10px;
+}
+.tabcontent .table-info tr td input:focus {
+    border: var(--green) 1px solid;
+}
+.tabcontent .table-info tr td .container {
+    float: left;
+    position: relative;
+}
+.tabcontent .table-info tr td .container input[type="radio"] {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.tabcontent .table-info tr td .container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: solid 1px #525252;
+}
+.tabcontent .table-info tr td .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.tabcontent .table-info tr td .container input:checked ~ .checkmark {
+    background-color: #fff;
+    border: 1px var(--green) solid;
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.tabcontent .table-info tr td .container input:checked ~ .checkmark::after {
+    display: block;
+}
+.tabcontent .table-info tr td .container .checkmark::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.tabcontent .table-info tr td select {
+    height: 30px;
+    width: 100px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+    cursor: pointer;
+}
+.tabcontent .picture {
+    float: right;
+    transform: translate(-50px, -230px);
+    border: solid 2px var(--green);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.tabcontent .picture img {
+    width: 100%;
+    border-radius: 50%;
+}
+#personInfo button {
+    margin-left: 20%;
+}
+
+#address {
+    display: block;
+}
+#address .btn-address {
+    float: right;
+    margin-top: -30px;
+}
+.table-address {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-address button {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.table-address hr {
+    border-top: solid 1px #dddddd;
+}
+
+.table-address tbody tr .col-1 {
+    text-align: right;
+    vertical-align: top;
+    width: 20%;
+}
+.table-address tbody tr .col-2 {
+    text-align: left;
+    width: 70%;
+}
+.table-address tbody tr .col-3 {
+    text-align: right;
+}
+.table-address tbody tr td {
+    padding: 5px 5px;
+}
+.table-address tbody tr .col-3 .fa-solid {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: var(--green);
+}
+.table-address tbody tr .col-3 .fa-solid:hover {
+    background-color: var(--black);
+}
+
+#address .edit-add {
+    background-color: #fff;
+    width: max-content;
+    height: max-content;
+}
+.focus {
+    justify-content: center;
+    align-items: center;
+    z-index: 90000;
+    background-color: rgba(20, 20, 20, 0.3);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    display: flex !important;
+}
+.edit-add {
+    margin-bottom: 200px;
+}
+.edit-add table tbody tr td {
+    padding: 10px;
+}
+.edit-add table tbody tr td input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+    border: 1px solid #dddddd;
+    position: relative;
+    font-size: 16px;
+}
+.hoten::before {
+    content: "Họ và Tên";
+    transform: translate(20%, -50%);
+    position: absolute;
+    z-index: 1;
+    color: #3f3f3f;
+    background-color: #fff;
+    padding: 2px;
+}
+.sdt::before {
+    content: "Số điện thoại";
+    transform: translate(20%, -50%);
+    position: absolute;
+    z-index: 1;
+    color: #3f3f3f;
+    background-color: #fff;
+    padding: 2px;
+}
+.diachi::before {
+    content: "Tỉnh/Thành phố, Quận/Huyện, Phường/Xã";
+    transform: translate(5%, -50%);
+    position: absolute;
+    z-index: 1;
+    color: #3f3f3f;
+    background-color: #fff;
+    padding: 2px;
+}
+.diachi::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid #3f3f3f;
+    border-right: 7px solid transparent;
+    z-index: 1;
+    position: absolute;
+    transform: translate(410px, -25px) rotate(-45deg);
+}
+.dropdown-diachi {
+    position: relative;
+}
+.activeAdress {
+    display: block !important;
+}
+.dropdown-content {
+    width: 100%;
+    height: 300px;
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+}
+.dropdown-content .tab {
+    border: #dddddd solid 1px;
+    display: flex;
+}
+.dropdown-content .tab .tablinks {
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.activeTab {
+    border-bottom: 2px solid var(--green);
+}
+.dropdown-content .tabdiachi {
+    border: solid 1px #dddddd;
+    border-top: transparent;
+    height: 250px;
+    position: absolute;
+    width: 100%;
+    overflow-y: scroll;
+    display: none;
+}
+#province {
+    display: block;
+}
+.dropdown-content .tabdiachi option {
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown-content .tabdiachi option:hover {
+    background-color: #dddddd;
+}
+.sonha::before {
+    content: "Địa chỉ cụ thể";
+    transform: translate(10%, -50%);
+    position: absolute;
+    z-index: 1;
+    color: #3f3f3f;
+    background-color: #fff;
+    padding: 2px;
+}
+
+.edit-add table tbody tr .action-btn {
+    text-align: right;
+}
+.exit {
+    background-color: #fff;
+    color: black;
+    border: 1px solid #ccc;
+}
+.exit:hover {
+    background-color: #dddddd;
+}
+
+.alert-box {
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+}
+.alert-box legend {
+    font-size: 18px;
+    padding: 40px 0px;
+}
+.alert-box button {
+    width: 49%;
+    float: left;
+}
+.alert-box .exit {
+    margin-left: 2%;
+}
